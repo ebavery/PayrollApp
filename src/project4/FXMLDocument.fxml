@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project4.FXMLDocumentController">
+    <children>
+      <Polygon fx:id="polyMessage" fill="#d2f2e2" layoutX="405.0" layoutY="704.0" scaleY="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+        <Label fx:id="lblMessage" layoutX="30.0" layoutY="715.0" minHeight="24.0" minWidth="69" prefHeight="173.0" prefWidth="581.0" textFill="#f51018" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <Label layoutX="63.0" layoutY="14.0" text="PAYROLL ADMINISTRATION" textAlignment="CENTER" textFill="#f5d509">
+         <font>
+            <Font name="Century Gothic Bold" size="69.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClear" layoutX="791.0" layoutY="810.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnClear" text="CLEAR" textFill="#710f4a">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExit" layoutX="898.0" layoutY="810.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnExit" text="EXIT" textFill="#710f4a">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font>
+      </Button>
+      <GridPane layoutX="327.0" layoutY="132.0" prefHeight="458.0" prefWidth="347.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="154.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="193.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtLast" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtFirst" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtMI" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtState" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtDept" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtJobLevel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtSalary" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="txtSalMin" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="txtSalMax" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="lblLast" text="Last: " textFill="#f5d509" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFirst" text="First: " textFill="#f5d509" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMI" text="M.I.: " textFill="#f5d509" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDept" text="Dept: " textFill="#f5d509" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblJobLevel" text="Job Level: " textFill="#f5d509" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSalary" text="Salary: " textFill="#f5d509" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSalMin" text="Salary Minimum: " textFill="#f5d509" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSalMax" text="Salary Maximum: " textFill="#f5d509" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmpNo" text="EmpNo: " textFill="#f5d509">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmpNo" editable="false" prefHeight="31.0" prefWidth="95.0" GridPane.columnIndex="1" />
+            <Label fx:id="lblState" text="State:  " textFill="#f5d509" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            
+          
+         </children>
+      </GridPane>
+      <TextField fx:id="txtLevelPercent" editable="false" layoutX="797.0" layoutY="590.0" prefHeight="31.0" prefWidth="59.0" />
+      <Button fx:id="btnNew" layoutX="51.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnNew" text="CREATE NEW RECORD" textFill="#710f4a">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSearch" layoutX="51.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnSearch" text="SEARCH BY EMPNO" textFill="#710f4a">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="471.0" layoutY="656.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnUpdate" text="UPDATE" textFill="#710f4a">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="364.0" layoutY="656.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnDelete" text="DELETE" textFill="#eb0e0e">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblLevelPercent" layoutX="622.0" layoutY="595.0" prefHeight="21.0" prefWidth="169.0" text="Penetration into level " textFill="#f5d509">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmpNoSearch" layoutX="196.0" layoutY="201.0" prefHeight="31.0" prefWidth="72.0" />
+      <Label fx:id="lblEmpNoSearch" layoutX="51.0" layoutY="201.0" styleClass="gridpane" stylesheets="@PayrollAdministration.css" text="Enter EmpNo: " textFill="#f5d509">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNewEmpNo" layoutX="51.0" layoutY="379.0" text="Enter New EmpNo: " textFill="#f5d509">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNewEmpNo" layoutX="240.0" layoutY="379.0" prefHeight="31.0" prefWidth="72.0" />
+      <Button fx:id="btnAdd" layoutX="590.0" layoutY="658.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnAdd" text="ADD" textFill="#710f4a">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <Rectangle fx:id="rectMessage" arcHeight="5.0" arcWidth="5.0" fill="#d2f2e2" height="112.0" layoutX="310.0" layoutY="716.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="189.0" />
+      <Button fx:id="btnDeleteCancel" layoutX="328.0" layoutY="772.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnDeleteCancel" text="CANCEL" textFill="#071ae4">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDeleteConfirm" layoutX="411.0" layoutY="772.0" mnemonicParsing="false" onMouseClicked="#handleButtonActionBtnDeleteConfirm" text="DELETE" textFill="#e10909">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblDeleteConfirm" layoutX="330.0" layoutY="734.0" text="CONFIRM DELETE" textFill="#d30a0a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

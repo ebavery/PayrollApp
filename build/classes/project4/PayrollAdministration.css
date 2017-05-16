@@ -1,0 +1,27 @@
+/*****************************************************************************
+ * Program Name:        Project 4 -- PayrollAdministration.css
+ * Program Description: This file sets the styles for the Payroll Administration app.
+ * Program Author:      Elizabeth Avery
+ * Date Created:        12/09/2016
+ * Change#      Change Date     Programmer Name     Description
+ * -------      -----------     ---------------     ----------------------
+*****************************************************************************/
+.root {
+    -fx-background-image: url("Abstract_blue_background.jpg");
+        
+}
+
+.button {
+    -fx-background-color: #f5d509;
+    
+}
+
+#txtSalMin, #txtSalMax, #txtLevelPercent, #txtEmpNo {
+    -fx-background-color: lightgrey;
+}
+
+#lblEmpNo, #lblLast, #lblFirst, #lblMI, #lblState, #lblDept, #lblJobLevel, #lblSalary, #lblSalMin, #lblSalMax, #lblLevelPercent, #lblEmpNoSearch, #lblNewEmpNo {
+    -fx-font-weight: bold;
+    -fx-font-family: "Lucida";
+   
+}
